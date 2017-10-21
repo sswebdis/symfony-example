@@ -1,0 +1,26 @@
+AppBundle\Entity\ParseUrlList:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ParseUrlListRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: true
+        url:
+            type: string
+            length: 255
+            unique: true
+        state:
+            type: integer
+            nullable: true
+        createTime:
+            type: datetime
+            column: create_time
+    lifecycleCallbacks: {  }
